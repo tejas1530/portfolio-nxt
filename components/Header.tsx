@@ -6,13 +6,34 @@ import { motion } from "framer-motion"
 
 type Props = {}
 
+const variants = {
+    open: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 0.5, // Adjust the animation duration as needed
+            ease: "easeInOut",
+        },
+    },
+    closed: {
+        opacity: 0,
+        x: "-100%",
+        transition: {
+            duration: 0.5, // Adjust the animation duration as needed
+            ease: "easeInOut",
+        },
+    },
+
+};
+
+
 const Header = (props: Props) => {
     const [isNavOpen, setIsNavOpen] = React.useState(false);
 
     const variants = {
         open: { opacity: 1, x: 0 },
         closed: { opacity: 0, x: "-100%" },
-      }
+    }
 
     return (
         <header className='top-0 sticky'>
@@ -60,9 +81,10 @@ const Header = (props: Props) => {
                             <span className="block h-0.5 w-8 animate-pulse bg-gray-200"></span>
                         </div>
                         <motion.div
-                            animate={isNavOpen?"open":"close"}
+                            initial="closed"
+                            animate={isNavOpen ? "open" : "close"}
                             variants={variants}
-                            className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"}  `} >
+                            className={`${isNavOpen ? "showMenuNav" : "hideMenuNav"} z-10 `} >
                             <div
                                 className="absolute top-0 right-0 px-8 py-8 bg-transparent  "
                                 onClick={() => setIsNavOpen(false)}
@@ -72,7 +94,9 @@ const Header = (props: Props) => {
                             <ul
 
                                 className="flex flex-col items-center justify-between min-h-[250px] ">
-                                <li className="border-b border-gray-400 my-8 uppercase">
+                                <li
+
+                                    className="border-b border-gray-400 my-8 uppercase">
                                     <a href="/home">Home</a>
                                 </li> <li className="border-b border-gray-400 my-8 uppercase">
                                     <a href="/about">About</a>
@@ -116,7 +140,7 @@ const Header = (props: Props) => {
         height: 100vh;
         top: 0;
         left: 0;
-        background: transparent;
+        // background:inherit;
         z-index: 10;
         display: flex;
         flex-direction: column;
