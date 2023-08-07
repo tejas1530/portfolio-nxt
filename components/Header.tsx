@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import logo from "../public/pngwing.com.png"
 import { motion } from "framer-motion"
+import Link from 'next/link'
 
 type Props = {}
 
@@ -11,7 +12,7 @@ const variants = {
         opacity: 1,
         x: 0,
         transition: {
-            duration: 0.5, // Adjust the animation duration as needed
+            duration: 1, // Adjust the animation duration as needed
             ease: "easeInOut",
         },
     },
@@ -19,7 +20,7 @@ const variants = {
         opacity: 0,
         x: "-100%",
         transition: {
-            duration: 0.5, // Adjust the animation duration as needed
+            duration: 1, // Adjust the animation duration as needed
             ease: "easeInOut",
         },
     },
@@ -36,7 +37,7 @@ const Header = (props: Props) => {
     }
 
     return (
-        <header className='top-0 sticky'>
+        <header className='top-0 sticky' id='home'>
             <div className='flex items-center justify-between  py-4' >
                 <motion.a
                     initial={{
@@ -89,45 +90,63 @@ const Header = (props: Props) => {
                                 className="absolute top-0 right-0 px-8 py-8 bg-transparent  "
                                 onClick={() => setIsNavOpen(false)}
                             >
-
+                                <svg
+                                    className="h-8 w-8 text-gray-300"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                </svg>
                             </div>
                             <ul
 
                                 className="flex flex-col items-center justify-between min-h-[250px] ">
                                 <li
 
-                                    className="border-b border-gray-400 my-8 uppercase">
-                                    <a href="/home">Home</a>
-                                </li> <li className="border-b border-gray-400 my-8 uppercase">
-                                    <a href="/about">About</a>
+                                    className="border-b border-gray-400 my-8  uppercase">
+                                    <Link  href="/"><h1>Home</h1></Link>
+                                </li> <li className="border-b border-gray-400 my-8  uppercase">
+                                    <Link href="#about"><h1>About</h1></Link>
                                 </li>
-                                <li className="border-b border-gray-400 my-8 uppercase">
-                                    <a href="/skills">Skills</a>
+                                <li className="border-b border-gray-400 my-8  uppercase">
+                                    <Link href="#experience"><h1>Experience</h1></Link>
                                 </li>
-                                <li className="border-b border-gray-400 my-8 uppercase">
-                                    <a href="/projects">Projects</a>
+                                <li className="border-b border-gray-400 my-8  uppercase">
+                                    <Link href="#skills"><h1>Skills</h1></Link>
                                 </li>
-                                <li className="border-b border-gray-400 my-8 uppercase">
-                                    <a href="/contact">Contact</a>
+                                <li className="border-b border-gray-400 my-8  uppercase">
+                                    <Link href="#projects"><h1>Projects</h1></Link>
+                                </li>
+                                <li className="border-b border-gray-400 my-8  uppercase">
+                                    <Link href="#contact"><h1>Contact</h1></Link>
                                 </li>
                             </ul>
                         </motion.div>
                     </section>
                     <ul className="DESKTOP-MENU hidden space-x-8 lg:flex mr-5 ">
                         <li>
-                            <a href="/home">Home</a>
+                            <Link href="#hero">Home</Link>
                         </li>
                         <li>
-                            <a href="/about">About</a>
+                            <Link href="#about">About</Link>
                         </li>
                         <li>
-                            <a href="/skills">Skills</a>
+                            <Link href="#experience">Experience</Link>
                         </li>
                         <li>
-                            <a href="/portfolio">Projects</a>
+
+                            <Link href="#skills">Skills</Link>
                         </li>
                         <li>
-                            <a href="/contact">Contact</a>
+                            <Link href="#portfolio">Projects</Link>
+                        </li>
+                        <li>
+                            <Link href="#contact">Contact</Link>
                         </li>
                     </ul> <style>{`
       .hideMenuNav {

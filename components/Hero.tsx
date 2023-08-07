@@ -1,6 +1,7 @@
 'use client'
 import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import dp from "../public/106841205.jpeg"
@@ -10,10 +11,10 @@ type Props = {};
 function Hero({ }: Props) {
   const [text, count] = useTypewriter({
     words: [
-      "Hi There",
+
       "I am a Full-Stack Developer"
     ],
-   
+
     delaySpeed: 2000
 
   })
@@ -22,24 +23,42 @@ function Hero({ }: Props) {
     words: [
       "Welcome to my corner of the internet!",
       "I'm thrilled to have you here."
-     
-      
+
+
     ],
     loop: true,
     delaySpeed: 2000
   })
-  return <div className=" h-screen flex flex-col   space-y-8 items-center justify-center  text-center overflow-hidden border  " >
+  return <section className="sm:flex sm:justify-start sm:items-start" >
+    <motion.div
+      initial={{
+        opacity: 0,
+        x: -500,
+        scale: 0.5
+      }}
+      animate={{
+        x: 0,
+        opacity: 1,
+        scale: 1
+      }}
+      transition={{
+        duration: 1.2,
+        ease: "easeInOut"
+      }}
+      className=" h-screen flex flex-col   space-y-8 items-center justify-center  text-center overflow-hidden     
+    " >
 
-    <Image
-      src={dp}
-      alt="dp"
-      className=" h-[150px] w-[150px] rounded-full relative z-0 mx-auto object-cover "
-    />
-    <h1 className="text-4xl font-bold font-mono " >Tejas Bhatt</h1>
-    <h1 className="text-2xl font-bold font-mono" >{text}</h1>
-    <p className="text-xl font-bold font-sans" >{text2}</p>
+      <Image
+        src={dp}
+        alt="dp"
+        className=" h-[150px] w-[150px] rounded-full  z-1 mx-auto object-cover "
+      />
+      <h1 className="text-4xl font-bold font-mono " >Tejas Bhatt</h1>
+      <h1 className="text-2xl font-bold font-mono" >{text}</h1>
+      <p className="text-xl font-bold font-sans" >{text2}</p>
 
-  </div>;
+    </motion.div>
+  </section>
 }
 
 export default Hero;
