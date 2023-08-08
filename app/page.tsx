@@ -2,10 +2,16 @@ import Header from "@/components/Header";
 import Head from "next/head";
 import Image from "next/image";
 import imgs from "../public/photo-1446941611757-91d2c3bd3d45.jpeg"
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import WorkExperience from "@/components/WorkExperience";
-import Skills from "@/components/Skills";
+
+
+
+import Headers from "@/components/Headers";
+import About from "./about/page";
+import Hero from "./hero/page";
+import WorkExperience from "./experience/page";
+import Skills from "./skills/page";
+import Project from "./projects/page";
+import Contact from "./contact/page";
 
 
 
@@ -17,18 +23,25 @@ export default function Home() {
       <Head>
         <title>Tejas Portfolio</title>
       </Head>
-      <Header />
+     
+      {/* <Headers/> */}
       <section id="hero" className="snap-start  " >
-        <Hero />
+        <Hero/>
       </section>
       <section id="about" className="snap-center" >
-        <About />
+        <About/>
       </section>
       <section id="experience" className="snap-center" >
-        <WorkExperience />
+        <WorkExperience/>
       </section>
       <section id="skills" className="snap-start" >
-        <Skills />
+        <Skills/>
+      </section>
+      <section id="projects"  className="snap-start">
+        <Project/>
+      </section>
+      <section id="contact" className="snap-start" >
+        <Contact/>
       </section>
     </div>
   );

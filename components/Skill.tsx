@@ -25,7 +25,7 @@ function Skill({ directionLeft }: Props) {
             >
                 <Image src={gg} alt='faf'
                     className='rounded-full border border-gray-400 object-cover w-24 h-24 
-                xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out
+                xl:w-32 xl:h-32 md:h-28 md:w-28 filter group-hover:grayscale transition duration-300 ease-in-out
                 '
                 />
             </motion.div>

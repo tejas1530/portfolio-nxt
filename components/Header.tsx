@@ -4,6 +4,7 @@ import Image from 'next/image'
 import logo from "../public/pngwing.com.png"
 import { motion } from "framer-motion"
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 type Props = {}
 
@@ -30,7 +31,7 @@ const variants = {
 
 const Header = (props: Props) => {
     const [isNavOpen, setIsNavOpen] = React.useState(false);
-
+    const router = useRouter()
     const variants = {
         open: { opacity: 1, x: 0 },
         closed: { opacity: 0, x: "-100%" },
@@ -111,42 +112,42 @@ const Header = (props: Props) => {
                                     className="border-b border-gray-400 my-8  uppercase">
                                     <Link  href="/"><h1>Home</h1></Link>
                                 </li> <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="#about"><h1>About</h1></Link>
+                                    <Link href="/about"><h1>About</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="#experience"><h1>Experience</h1></Link>
+                                    <Link href="/experience"><h1>Experience</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="#skills"><h1>Skills</h1></Link>
+                                    <Link href="/skills"><h1>Skills</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="#projects"><h1>Projects</h1></Link>
+                                    <Link href="/projects"><h1>Projects</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="#contact"><h1>Contact</h1></Link>
+                                    <Link href="/contact"><h1>Contact</h1></Link>
                                 </li>
                             </ul>
                         </motion.div>
                     </section>
                     <ul className="DESKTOP-MENU hidden space-x-8 lg:flex mr-5 ">
                         <li>
-                            <Link href="#hero">Home</Link>
+                        <Link  href="/"><h1>Home</h1></Link>
                         </li>
                         <li>
-                            <Link href="#about">About</Link>
+                        <Link href="/about"><h1>About</h1></Link>
                         </li>
                         <li>
-                            <Link href="#experience">Experience</Link>
+                            <Link href="/experience">Experience</Link>
                         </li>
                         <li>
 
-                            <Link href="#skills">Skills</Link>
+                            <Link href="/skills">Skills</Link>
                         </li>
                         <li>
-                            <Link href="#portfolio">Projects</Link>
+                            <Link href="/projects">Projects</Link>
                         </li>
                         <li>
-                            <Link href="#contact">Contact</Link>
+                            <Link href="/contact">Contact</Link>
                         </li>
                     </ul> <style>{`
       .hideMenuNav {

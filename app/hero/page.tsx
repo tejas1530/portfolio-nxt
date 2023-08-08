@@ -4,7 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
 import Image from "next/image";
-import dp from "../public/106841205.jpeg"
+import dp from "../../public/106841205.jpeg"
 
 type Props = {};
 
