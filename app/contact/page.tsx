@@ -19,11 +19,12 @@ function Contact({ }: Props) {
                 Contact
             </h3>
 
-            <div className='fex felx-col space-y-10'>
-                <h4 className='text-4xl font-semibold text-center ' >
+            <div className='fex flex-col space-y-10'>
+                <h4 className='text-3xl sm:text-4xl mb-2 font-semibold text-center mt-20 ' >
                     I have got what you need.{" "}
-                    <span className='text-5xl text-gray-900 dark:text-white' >{`Let's talk `} </span>
                 </h4>
+
+                <h3 className='text-4xl sm:text-5xl text-center text-gray-900 dark:text-white' > {`Let's Talk`}</h3>
                 <div className='space-y-10' >
                     <div className='flex items-center justify-center space-x-5  ' >
                         <PhoneIcon className='h-7 w-7 animate-pulse' />
@@ -39,7 +40,7 @@ function Contact({ }: Props) {
                         <p className='text-2xl'> Old Sangavi , Pune </p>
                     </div>
 
-                    <Form/>
+                    <Form />
                 </div>
             </div>
         </motion.div>

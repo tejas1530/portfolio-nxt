@@ -52,3 +52,10 @@ body {
     padding: 10px;
     text-align: center;
 }
+
+.contactinp{
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.244);
+  backdrop-filter: blur(1px);
+  @apply rounded-sm border-b px-6 py-4 border-[#242424] text-white placeholder-gray-200 transition-all focus:border-[#F7Ab0A]
+}

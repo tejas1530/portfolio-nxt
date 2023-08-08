@@ -18,30 +18,34 @@ import Contact from "./contact/page";
 
 export default function Home() {
   return (
-    <div className="mains h-screen snap-y snap-mandatory overflow-scroll z-0 " >
+    <div className="mains h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden  z-0 
+    scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]
+    "
+
+    >
 
       <Head>
         <title>Tejas Portfolio</title>
       </Head>
-     
+
       {/* <Headers/> */}
       <section id="hero" className="snap-start  " >
-        <Hero/>
+        <Hero />
       </section>
       <section id="about" className="snap-center" >
-        <About/>
+        <About />
       </section>
       <section id="experience" className="snap-center" >
-        <WorkExperience/>
+        <WorkExperience />
       </section>
       <section id="skills" className="snap-start" >
-        <Skills/>
+        <Skills />
       </section>
-      <section id="projects"  className="snap-start">
-        <Project/>
+      <section id="projects" className="snap-start">
+        <Project />
       </section>
       <section id="contact" className="snap-start" >
-        <Contact/>
+        <Contact />
       </section>
     </div>
   );
