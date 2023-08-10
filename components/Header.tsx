@@ -110,31 +110,31 @@ const Header = (props: Props) => {
                                 <li
 
                                     className="border-b border-gray-400 my-8  uppercase">
-                                    <Link  href="/"><h1>Home</h1></Link>
+                                    <Link href="/" onClick={() => setIsNavOpen(false)} ><h1>Home</h1></Link>
                                 </li> <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="/about"><h1>About</h1></Link>
+                                    <Link href="/about" onClick={() => setIsNavOpen(false)} ><h1>About</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="/experience"><h1>Experience</h1></Link>
+                                    <Link href="/experience" onClick={() => setIsNavOpen(false)} ><h1>Experience</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="/skills"><h1>Skills</h1></Link>
+                                    <Link href="/skills" onClick={() => setIsNavOpen(false)} ><h1>Skills</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="/projects"><h1>Projects</h1></Link>
+                                    <Link href="/projects" onClick={() => setIsNavOpen(false)} ><h1>Projects</h1></Link>
                                 </li>
                                 <li className="border-b border-gray-400 my-8  uppercase">
-                                    <Link href="/contact"><h1>Contact</h1></Link>
+                                    <Link href="/contact" onClick={() => setIsNavOpen(false)} ><h1>Contact</h1></Link>
                                 </li>
                             </ul>
                         </motion.div>
                     </section>
                     <ul className="DESKTOP-MENU hidden space-x-8 lg:flex mr-5 ">
                         <li>
-                        <Link  href="/"><h1>Home</h1></Link>
+                            <Link href="/"><h1>Home</h1></Link>
                         </li>
                         <li>
-                        <Link href="/about"><h1>About</h1></Link>
+                            <Link href="/about"><h1>About</h1></Link>
                         </li>
                         <li>
                             <Link href="/experience">Experience</Link>

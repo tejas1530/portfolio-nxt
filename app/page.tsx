@@ -12,6 +12,8 @@ import WorkExperience from "./experience/page";
 import Skills from "./skills/page";
 import Project from "./projects/page";
 import Contact from "./contact/page";
+import { GetStaticProps } from "next";
+import { PageInfo } from "@/typing";
 
 
 
@@ -50,3 +52,4 @@ export default function Home() {
     </div>
   );
 }
+

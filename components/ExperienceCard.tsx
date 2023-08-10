@@ -2,9 +2,13 @@ import Image from 'next/image'
 import React from 'react'
 import ds from "../public/pngwing.com (1).png"
 import { motion } from 'framer-motion'
-type Props = {}
+import { Experience } from '@/typing'
+type Props = {
+   data:Experience[]
+}
 
 const ExperienceCard = (props: Props) => {
+const {data}=prop
     return (
 
         <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 
