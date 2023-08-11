@@ -11,22 +11,6 @@ import { sanityClient, urlFor } from "@/sanity";
 type Props = {};
 
 const About = (props: Props) => {
-	const [data1, setData1] = React.useState<PageInfo[]>();
-	const fetchData1 = async () => {
-		const data1 = await getData1();
-		setData1(data1);
-	};
-	React.useEffect(() => {
-		// fetchData();
-		fetchData1();
-	}, []);
-	async function getData1() {
-		const query1 = groq`
-  *[_type=="pageInfo"]
-  `;
-		const pageInfo: PageInfo[] = await sanityClient.fetch(query1);
-		return pageInfo;
-	}
 	return (
 		<div
 			className="flex flex-col relative h-screen text-center md:text-left md:flex-row 
@@ -54,45 +38,37 @@ const About = (props: Props) => {
 					once: true,
 				}}
 			>
-				{data1?.map((img) => (
-					
-                    <Image
-						key={img._id}
-						width={150}
-						height={150}
-						// src={urlFor(img.profilePic).url()}
-						loader={() => "https://cdn.sanity.io/images/pa6n8srn/production/f63be0cf8ddfb463f81951e4b6e544739c55a274-1125x1125.png"}
-						src={"https://cdn.sanity.io/images/pa6n8srn/production/f63be0cf8ddfb463f81951e4b6e544739c55a274-1125x1125.png"}
-						alt="dpd"
-						className=" h-[150px] w-[150px]  sm:h-64 sm:w-64 rounded-full  z-1 mx-auto object-cover "
-					/>
-				))}
+				<Image
+					width={150}
+					height={150}
+					src={Pc}
+					alt="dpd"
+					className=" h-[150px] w-[150px]  sm:h-64 sm:w-64 rounded-full  z-1 mx-auto object-cover "
+				/>
 			</motion.div>
 
 			<div className="space-y-10 px-0 md:px-10">
 				<h4 className="text-xl sm:text-4xl  py-1 font-semibold tracking-[10px] font-sans ">
 					Here is a little background
 				</h4>
-				
-					{
-                        data1?.map((data)=>(
-<p  key={data._id} className="text-sm sm:text-xl sm:tracking-widest ">
-    {data.backgroundInformation}
-    <span className=" hidden xl:block">
-						My transition into full-stack development has been
-						fueled by a desire to create comprehensive solutions
-						that seamlessly integrate both mechanical and digital
-						realms. By combining my technical expertise in
-						mechanical engineering with the power of web
-						technologies, I am able to craft interactive and
-						user-centric applications that transcend traditional
-						boundaries.
-					</span>
-</p>
-                        ))
-                    }
-				
-					
+
+			
+					<p
+						
+						className="text-sm sm:text-xl sm:tracking-widest "
+					>
+					Hello, I am  Tejas , a passionate mechanical engineer with a newfound love for the dynamic world of full-stack development. With a solid foundation in engineering principles and a drive for continuous learning, I have embarked on a journey to bridge the gap between hardware and software.Join me on this exciting cross-disciplinary journey as I harness the synergy between mechanics and code to build a future where technology knows no bounds. Let us connect and explore the limitless possibilities together.
+						<span className=" hidden xl:block">
+							My transition into full-stack development has been
+							fueled by a desire to create comprehensive solutions
+							that seamlessly integrate both mechanical and
+							digital realms. By combining my technical expertise
+							in mechanical engineering with the power of web
+							technologies, I am able to craft interactive and
+							user-centric applications that transcend traditional
+							boundaries.
+						</span>
+					</p>
 				
 			</div>
 		</div>

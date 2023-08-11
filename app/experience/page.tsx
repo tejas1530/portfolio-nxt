@@ -10,31 +10,8 @@ type Props = {
 }
 
 const WorkExperience = (props: Props) => {
-    const [data, setData] = React.useState<Experience[]>([])
-
-    const fetchData = async () => {
-        const data = await getData()
-        setData(data)
-    }
-
-    React.useEffect(()=>{
-        fetchData()
-    },[])
-    console.log(typeof(data))
-
-    React.useEffect(()=>{
-            console.log(data)
-    },[data])
-    async function getData(){
-        const query=groq`
-        *[_type=="experience"]{
-            ...,
-            technologies[]->
-        }
-        `
-        const experience:Experience[]=await sanityClient.fetch(query)
-        return experience
-    }
+  
+    
  
     return (
         <motion.div
@@ -49,16 +26,15 @@ const WorkExperience = (props: Props) => {
                 Experience
             </h3>
             <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x  snap-mandatory xl:mt-40 ' >
-               {
-                data?.map((experience)=>(
-                    <ExperienceCard key={experience._id} data={experience} />
-                ))
-               }
+               
+               
+                    <ExperienceCard  />
+               
             </div>
         </motion.div>
     )
 
-}
+    }
 
 export default WorkExperience
 
