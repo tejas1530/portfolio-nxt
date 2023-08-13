@@ -3,13 +3,14 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { SocialIcon } from "react-social-icons";
-import { sanityClient, urlFor } from "@/sanity";
-import groq from "groq";
+// import { sanityClient, urlFor } from "@/sanity";
+// import groq from "groq";
 import React, { useState, useEffect } from "react";
-import { PageInfo, Socials } from "@/typing";
+// import { PageInfo, Socials } from "@/typing";
 
 import Image from "next/image";
-import dp from "../../public/106841205.jpeg";
+import dp from "../../public/image_6487327.JPG"
+
 
 type page = {
 	/* ... */
