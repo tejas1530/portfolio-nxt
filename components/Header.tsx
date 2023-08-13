@@ -117,36 +117,36 @@ const Header = (props: Props) => {
                                 <li className="border-b border-gray-400 my-8  uppercase">
                                     <Link href="/experience" onClick={() => setIsNavOpen(false)} ><h1>Experience</h1></Link>
                                 </li>
-                                <li className="border-b border-gray-400 my-8  uppercase">
+                                {/* <li className="border-b border-gray-400 my-8  uppercase">
                                     <Link href="/skills" onClick={() => setIsNavOpen(false)} ><h1>Skills</h1></Link>
-                                </li>
-                                <li className="border-b border-gray-400 my-8  uppercase">
+                                </li> */}
+                                {/* <li className="border-b border-gray-400 my-8  uppercase">
                                     <Link href="/projects" onClick={() => setIsNavOpen(false)} ><h1>Projects</h1></Link>
-                                </li>
+                                </li> */}
                                 <li className="border-b border-gray-400 my-8  uppercase">
                                     <Link href="/contact" onClick={() => setIsNavOpen(false)} ><h1>Contact</h1></Link>
                                 </li>
                             </ul>
                         </motion.div>
                     </section>
-                    <ul className="DESKTOP-MENU hidden space-x-8 lg:flex mr-5 ">
-                        <li>
+                    <ul className="DESKTOP-MENU hidden text-2xl  space-x-8 lg:flex mr-5  ">
+                        <li className='hover:text-[#FE8040]' >
                             <Link href="/"><h1>Home</h1></Link>
                         </li>
-                        <li>
+                        <li className='hover:text-[#FE8040]' >
                             <Link href="/about"><h1>About</h1></Link>
                         </li>
-                        <li>
+                        <li className='hover:text-[#FE8040]' >
                             <Link href="/experience">Experience</Link>
                         </li>
-                        <li>
+                        {/* <li>
 
                             <Link href="/skills">Skills</Link>
                         </li>
                         <li>
                             <Link href="/projects">Projects</Link>
-                        </li>
-                        <li>
+                        </li> */}
+                        <li className='hover:text-[#FE8040]' >
                             <Link href="/contact">Contact</Link>
                         </li>
                     </ul> <style>{`

@@ -13,7 +13,7 @@ import Skills from "./skills/page";
 import Project from "./projects/page";
 import Contact from "./contact/page";
 import { GetStaticProps } from "next";
-import { PageInfo } from "@/typing";
+// import { PageInfo } from "@/typing";
 
 
 
@@ -21,7 +21,7 @@ import { PageInfo } from "@/typing";
 export default function Home() {
   return (
     <div className="mains h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden  z-0 
-    scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]
+    scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#FE8040]
     "
 
     >
@@ -40,12 +40,12 @@ export default function Home() {
       <section id="experience" className="snap-center" >
         <WorkExperience />
       </section>
-      <section id="skills" className="snap-start" >
+      {/* <section id="skills" className="snap-start" >
         <Skills />
-      </section>
-      <section id="projects" className="snap-start">
+      </section> */}
+      {/* <section id="projects" className="snap-start">
         <Project />
-      </section>
+      </section> */}
       <section id="contact" className="snap-start" >
         <Contact />
       </section>

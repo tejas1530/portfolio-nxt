@@ -43,7 +43,7 @@ function Form({ }: Props) {
   });
   return (
     <>
-      <form onSubmit={onSubmit} className="flex flex-col space-y-2 w-fit mx-auto ">
+      <form onSubmit={onSubmit} className="flex flex-col space-y-2 w-fit mx-auto  ">
         <div className="flex  sm:space-x-2 flex-col sm:flex-row space-y-2 sm:space-y-0  ">
           <input
             className="contactinp"
@@ -64,10 +64,10 @@ function Form({ }: Props) {
           placeholder="Subject"
           {...register('subject')}
         />
-        <textarea {...register('email')} className="contactinp" placeholder="Message" />
+        <textarea {...register('email')} className="contactinp " placeholder="Message"  />
         <button
           type="submit"
-          className="py-5 px-10 rounded-md text-white font-semibold text-lg bg-[#ffe91f7d]"
+          className="py-5 px-10 rounded-md text-white font-semibold text-lg bg-[#FE8040] "
         >
           Submit
         </button>

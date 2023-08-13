@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import Pc from "../../public/IMG-1140-modified.png";
+import Pc from "../../public/ica.png";
 import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
-import groq from "groq";
-import { PageInfo } from "@/typing";
-import { sanityClient, urlFor } from "@/sanity";
+// import groq from "groq";
+// import { PageInfo } from "@/typing";
+// import { sanityClient, urlFor } from "@/sanity";
 
 type Props = {};
 
@@ -17,7 +17,7 @@ const About = (props: Props) => {
     max-w-7xl px-10 justify-evenly mx-auto items-center 
     "
 		>
-			<h3 className=" absolute top-10 md:top-24 uppercase tracking-[20px] text-gray-400 text-2xl ">
+			<h3 className=" absolute top-5  uppercase tracking-[20px] text-gray-400 text-2xl ">
 				About
 			</h3>
 			<motion.div
@@ -48,25 +48,18 @@ const About = (props: Props) => {
 			</motion.div>
 
 			<div className="space-y-10 px-0 md:px-10">
-				<h4 className="text-xl sm:text-4xl  py-1 font-semibold tracking-[10px] font-sans ">
+				<h4 className="text-xl sm:text-4xl  py-1 font-semibold tracking-[10px] font-sans text-[#FE8040]  ">
 					Here is a little background
 				</h4>
 
 			
 					<p
 						
-						className="text-sm sm:text-xl sm:tracking-widest "
+						className="text-sm sm:text-xl sm:tracking-widest text-[#cccccc]  "
 					>
-					Hello, I am  Tejas , a passionate mechanical engineer with a newfound love for the dynamic world of full-stack development. With a solid foundation in engineering principles and a drive for continuous learning, I have embarked on a journey to bridge the gap between hardware and software.Join me on this exciting cross-disciplinary journey as I harness the synergy between mechanics and code to build a future where technology knows no bounds. Let us connect and explore the limitless possibilities together.
+					Hello I'm Shubahm Shah a Chartered Accountant (CA) with a penchant for precision and a zeal for excellence. Welcome to my digital domain, where financial data transforms into strategic insights and opportunities.Armed with a solid foundation in finance, my professional journey has been a tapestry woven with diverse experiences and continuous learning. With a knack for unraveling intricate financial landscapes, I have cultivated an acute attention to detail and a profound understanding of the dynamic world of finance and taxation.
 						<span className=" hidden xl:block">
-							My transition into full-stack development has been
-							fueled by a desire to create comprehensive solutions
-							that seamlessly integrate both mechanical and
-							digital realms. By combining my technical expertise
-							in mechanical engineering with the power of web
-							technologies, I am able to craft interactive and
-							user-centric applications that transcend traditional
-							boundaries.
+						Over the course of my career, I've had the privilege of collaborating with a wide spectrum of clients, ranging from startups to multinational enterprises. Each interaction has bestowed upon me a unique vantage point and a repository of knowledge that I'm eager to share. My aim is to demystify complexities, empower informed decision-making, and be a driving force behind your financial achievements.
 						</span>
 					</p>
 				
