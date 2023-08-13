@@ -9,7 +9,8 @@ import React, { useState, useEffect } from "react";
 // import { PageInfo, Socials } from "@/typing";
 
 import Image from "next/image";
-import dp from "../../public/image_6487327.JPG"
+import dp from "../../public/106841205.jpeg"
+// import dd from "../../public/"
 
 
 type page = {
