@@ -57,9 +57,9 @@ const About = (props: Props) => {
 						
 						className="text-sm sm:text-xl sm:tracking-widest text-[#cccccc]  "
 					>
-					Hello I'm Shubahm Shah a Chartered Accountant (CA) with a penchant for precision and a zeal for excellence. Welcome to my digital domain, where financial data transforms into strategic insights and opportunities.Armed with a solid foundation in finance, my professional journey has been a tapestry woven with diverse experiences and continuous learning. With a knack for unraveling intricate financial landscapes, I have cultivated an acute attention to detail and a profound understanding of the dynamic world of finance and taxation.
+					Hello I am Shubahm Shah a Chartered Accountant (CA) with a penchant for precision and a zeal for excellence. Welcome to my digital domain, where financial data transforms into strategic insights and opportunities.Armed with a solid foundation in finance, my professional journey has been a tapestry woven with diverse experiences and continuous learning. With a knack for unraveling intricate financial landscapes, I have cultivated an acute attention to detail and a profound understanding of the dynamic world of finance and taxation.
 						<span className=" hidden xl:block">
-						Over the course of my career, I've had the privilege of collaborating with a wide spectrum of clients, ranging from startups to multinational enterprises. Each interaction has bestowed upon me a unique vantage point and a repository of knowledge that I'm eager to share. My aim is to demystify complexities, empower informed decision-making, and be a driving force behind your financial achievements.
+						Over the course of my career, I have had the privilege of collaborating with a wide spectrum of clients, ranging from startups to multinational enterprises. Each interaction has bestowed upon me a unique vantage point and a repository of knowledge that I am eager to share. My aim is to demystify complexities, empower informed decision-making, and be a driving force behind your financial achievements.
 						</span>
 					</p>
 				
