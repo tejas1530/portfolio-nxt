@@ -8,7 +8,7 @@ import React, { useState, useEffect } from "react";
 // import { PageInfo } from "@/typing";
 // import { sanityClient, urlFor } from "@/sanity";
 
-type Props = {};
+type Props = { };
 
 const About = (props: Props) => {
 	return (
